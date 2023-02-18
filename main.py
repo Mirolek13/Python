@@ -1,55 +1,102 @@
 from random import randint
-class Student:
-	def __init__(self, name):
-		self.name = name
-		self.gladness = 0
-		self.progress = 0
-		self.alive = True
-	def study(self):
-		self.progress += 20
-		self.gladness -= 10
-		print('Study time')
-	def chill(self):
-		self.gladness += 35
-		self.progress -= 8
-		print('Chill time')
-	def sleep(self):
-		self.gladness += 4
-		print('Sleep time')
-	def say_hello(self):
-		print('Hello!')
-	def live(self):
-		live_cube = randint(1,4)
-		if live_cube == 1:
-			self.study()
-		elif live_cube == 2:
-			self.chill()
-		elif live_cube == 3:
-			self.sleep()
-		elif live_cube == 4:
-			self.say_hello()
-		self.final()
-	def final(self):
-		if self.progress == 100:
-			print('Amazing! You graduated!')
-			self.alive = False
-		elif self.progress < -20:
-			print('Too bad... You are stupid')
-			self.alive = False
-		elif self.gladness < -20:
-			print('Depression :(')
-			self.alive = False
 
-print('Bob\'s life')
-obj1 = Student('Bob')
-for i in range(365):
-	if obj1.alive == False:
-		break
-	obj1.live()
+class Literatura:
+  def __init__(self, title):
+    self.autor = 'None'
+    self.title = title
+    self.genre = 'None'
+  def read(self):
+    print(self.title + " is being read")
 
-print('Jane\'s life')
-obj2 = Student('Jane')
-for i in range(365):
-	if obj2.alive == False:
-		break
-	obj2.live()
+class Book(Literatura):
+  def __init__(self, title):
+    super().__init__(title)
+    self.pages = 0
+  def read(self):
+    super().read()
+    print('I like to read ' + self.title)
+  def write(self):
+    print('I write fanfic of ', self.title)
+
+class Magazine(Literatura):
+  def __init__(self, title):
+    super().__init__(title)
+    self.pages = 0
+  def read(self):
+    super().read()
+    print('I like to read ' + self.title)
+  def write(self):
+    print('I write of ', self.title)
+
+magazine1 = Magazine("SuperMarket")
+magazine1.read()
+magazine1.write()
+
+book1 = Book('Harry Potter')
+book1.read()
+book1.write()
+    
+    
+
+
+
+
+# try:
+#   def decor(func):
+#     def wrapper1():
+#        print("") 
+#   def count():
+#     name = input("What is your name? ")
+#     n = name.islower()
+#     if n == True:
+#       print("Your name is " + name)
+#     if n == False:
+#       raise NameError
+#     a = int(input("A: "))
+#     sign = input("Sign: ")
+#     b = int(input("B: "))
+#     if sign == "/" and b == 0:
+#       raise ZeroDivisionError
+#     if sign != '+' and sign != '-' and sign!='*' and sign!='/':
+#       raise Warning
+#     elif sign == '+':
+#       print(f"{a} + {b} = {a+b}")
+#     elif sign == '-':
+#       print(f"{a} - {b} = {a-b}")
+#     elif sign == '*':
+#       print(f"{a} * {b} = {a*b}")
+#     elif sign == '/':
+#       print(f"{a} / {b} = {a/b}")
+#     except SyntaxError:
+#       print('You need to input digits!')
+#     except ZeroDivisionError:
+#       print('Go to school')
+#     except Warning:
+#       print('Unknown sign')
+#     except NameError:
+#       print("Error, write your name in letters")
+#     except:
+#       print('Error!')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
