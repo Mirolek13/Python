@@ -1,19 +1,5 @@
 from random import randint
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Literatura:
   def __init__(self, title):
     self.autor = 'None'
@@ -54,14 +40,6 @@ book1.write()
 
 
 
-
-
-
-
-
-
-
-    
 
 # try:
 #   def decor(func):
