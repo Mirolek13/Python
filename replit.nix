@@ -14,6 +14,7 @@
       # Needed for matplotlib
       pkgs.xorg.libX11
     ];
+    PYTHONHOME = "${pkgs.python310Full}";
     PYTHONBIN = "${pkgs.python310Full}/bin/python3.10";
     LANG = "en_US.UTF-8";
     STDERREDBIN = "${pkgs.replitPackages.stderred}/bin/stderred";
